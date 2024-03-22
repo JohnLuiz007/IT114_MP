@@ -10,9 +10,16 @@
     <form id="form1" runat="server">
         <asp:Label ID="Username" runat="server" Text="Username"></asp:Label>
         <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
+        <br />
+
         <asp:Label ID="Password" runat="server" Text="Password"></asp:Label>
         <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
-        <asp:Button ID="Signup" runat="server" Text="Signup" Onclick="Signup"/>
+        <br />
+
+        <asp:Label ID="DebugLbl" runat="server" Text="No errors"></asp:Label>
+        <br />
+
+        <asp:Button ID="Signup" runat="server" Text="Signup" OnClick="SignupClick"/>
 
     </form>
 </body>
