@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dummy.aspx.cs" Inherits="IT114L_MP_Testing_grounds.claireann" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="dummyLogin.aspx.cs" Inherits="IT114L_MP_Testing_grounds.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -19,11 +19,7 @@
         <asp:Label ID="DebugLbl" runat="server" Text="No errors"></asp:Label>
         <br />
 
-        <asp:Button ID="Signup" runat="server" Text="Signup" OnClick="SignupClick"/>
-        <br />
-
-        <asp:Label runat="server" Text="Already have an account?"></asp:Label>
-        <asp:HyperLink runat="server" NavigateUrl="~/dummyLogin.aspx" Text="Log In"></asp:HyperLink>
+        <asp:Button ID="Login" runat="server" Text="Login" OnClick="LoginClick"/>
 
     </form>
 </body>
