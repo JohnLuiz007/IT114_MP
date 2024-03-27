@@ -11,19 +11,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
 
 
 
-@keyframes fadeIn {
-  from {
-      opacity: 0;
-      transform: translateY(20px)
-  }
-
-  to {
-      opacity: 1;
-      transform: translateY(0)
-  }
-}
-
-
+/*Media Queries Section*/
 
 @media screen and (max-width: 768px) {
   .audio-list {
@@ -39,27 +27,120 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .logo-container img {
+    width: 400px;
+}
+  .sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+  }
 
+  .sidebar h3 {
+    font-size: 24px; /* Adjust font size as needed */
+  }
 
-.sidebar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0
+  .sidebar ul {
+    padding-left: 10px;
+    display: flex;
+    flex-direction: row; /* Arrange items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to next row if needed */
+    justify-content: space-between; /* Add space between items */
+  }
+
+  .sidebar li {
+    margin-right: 10px; /* Add spacing between items */
+  }
+
+  .sidebar li a {
+    font-size: 16px; /* Adjust font size as needed */
+  }
+
+  .sidebar img {
+    margin-left: auto; /* Move the image to the right */
+  }
 }
 
-.sidebar li {
-  margin-bottom: 10px
+
+@media only screen and (max-width: 400px) {
+  .sidebar {
+      width:100%;
+      padding: 20px 10px;
+      position: fixed;
+      top: -100%;
+      left: 0;
+      background-color: #f1f1f1;
+      z-index: 1000;
+      overflow-y: auto;
+      max-height: 100vh;
+      transition: transform .3s ease,background-color .3s ease;
+     
+  }
+
+@media only screen and (max-width: 768px) {
+  .sidebar-right {
+      width:70%;
+      right: -80%
+  }
 }
 
-.sidebar li a {
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  transition: color .3s ease
+@media screen and (max-width: 480px) {
+  .audio-info {
+      flex-grow:1
+  }
+
+  #rightsec {
+      display: none
+  }
+
+  #audioControlButton {
+      display: inline-block
+  }
+
+  .audio-controls {
+      margin-right: 10px
+  }
+
+  #currentTime,#duration {
+      display: none
+  }
 }
 
-.sidebar li a:hover {
-  color: #1db954
+
+
+@media only screen and (max-width: 768px) {
+  .songListContainer {
+    width: calc(100% - 60px); /* Adjust width for smaller screens */
+    margin-left: 0; /* Remove left margin */
+    padding: 10px; /* Adjust padding */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .songListContainer {
+    width: calc(100% - 40px); /* Further reduce width for even smaller screens */
+    padding: 5px; /* Adjust padding */
+  }
+
+  .pagination-button-container {
+    display: none; /* Hide pagination buttons on smaller screens */
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .audio-list {
+      grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+      gap: 10px
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .audio-list {
+      grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
+      gap: 5px
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -86,7 +167,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
 
 @media only screen and (max-width: 480px) {
   .sidebar {
-      width:100%;
+      width:200px;
       padding: 20px 10px;
       position: fixed;
       top: 0;
@@ -96,8 +177,97 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
       overflow-y: auto;
       max-height: 100vh;
       transition: transform .3s ease,background-color .3s ease;
+      display: block;
+  }
+
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px)
+  }
+
+  to {
+      opacity: 1;
+      transform: translateY(0)
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .song-container {
+      width:45%
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .song-container {
+      width:45%
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .audio-info {
+      flex-grow:1
+  }
+
+@media only screen and (max-width: 768px) {
+  .songListContainer {
+    width: calc(100% - 60px); /* Adjust width for smaller screens */
+    margin-left: 0; /* Remove left margin */
+    padding: 10px; /* Adjust padding */
+    height: auto;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .songListContainer {
+    width: calc(100% - 60px); /* Adjust width for smaller screens */
+    margin-left: 0; /* Remove left margin */
+    padding: 10px; /* Adjust padding */
+    height: auto;
+  }
+  
+}
+
+  #rightsec {
       display: none
   }
+
+  #audioControlButton {
+      display: inline-block
+  }
+
+  .audio-controls {
+      margin-right: 10px
+  }
+
+  #currentTime,#duration {
+      display: none
+  }
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0
+}
+
+.sidebar li {
+  margin-bottom: 10px
+}
+
+.sidebar li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  transition: color .3s ease
+}
+
+.sidebar li a:hover {
+  color: #1db954
+}
+
 
   #songList {
       margin-top: 10px
@@ -405,12 +575,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
   display: block; /* Show when active */
 }
 
-@media only screen and (max-width: 768px) {
-  .sidebar-right {
-      width:70%;
-      right: -80%
-  }
-}
+
 
 .sidebar-toggle {
   position: fixed;
@@ -436,30 +601,6 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
   outline: 0
 }
 
-
-
-
-@media screen and (max-width: 480px) {
-  .audio-info {
-      flex-grow:1
-  }
-
-  #rightsec {
-      display: none
-  }
-
-  #audioControlButton {
-      display: inline-block
-  }
-
-  .audio-controls {
-      margin-right: 10px
-  }
-
-  #currentTime,#duration {
-      display: none
-  }
-}
 
 .volume-bar-container {
   display: none
@@ -513,26 +654,6 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
 }
 
 
-@media only screen and (max-width: 768px) {
-  .songListContainer {
-    width: calc(100% - 60px); /* Adjust width for smaller screens */
-    margin-left: 0; /* Remove left margin */
-    padding: 10px; /* Adjust padding */
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .songListContainer {
-    width: calc(100% - 40px); /* Further reduce width for even smaller screens */
-    padding: 5px; /* Adjust padding */
-  }
-
-  .pagination-button-container {
-    display: none; /* Hide pagination buttons on smaller screens */
-  }
-}
-
-
 
 
 .container-fluid {
@@ -550,19 +671,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
   gap: 20px
 }
 
-@media screen and (max-width: 768px) {
-  .audio-list {
-      grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-      gap: 10px
-  }
-}
 
-@media screen and (max-width: 480px) {
-  .audio-list {
-      grid-template-columns:repeat(auto-fit,minmax(100px,1fr));
-      gap: 5px
-  }
-}
 
 .sidebar {
   width: 250px;
@@ -592,42 +701,6 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
   color: #1db954
 }
 
-@media only screen and (max-width: 768px) {
-  .sidebar {
-      width:200px
-  }
-
-  .sidebar h3 {
-      font-size: 18px
-  }
-
-  .sidebar ul {
-      padding-left: 10px
-  }
-
-  .sidebar li {
-      margin-bottom: 8px
-  }
-
-  .sidebar li a {
-      font-size: 14px
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .sidebar {
-      width:100%;
-      padding: 20px 10px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: #040404;
-      z-index: 1000;
-      overflow-y: auto;
-      max-height: 100vh;
-      transition: transform .3s ease,background-color .3s ease;
-      display: none
-  }
 
   #songList {
       margin-top: 10px
@@ -703,17 +776,6 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
   color: #fff
 }
 
-@media only screen and (max-width: 768px) {
-  .song-container {
-      width:45%
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .song-container {
-      width:45%
-  }
-}
 
 .audio-player {
   background-color:rgb(26, 25, 25);
@@ -1050,27 +1112,6 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
   margin-right: 10px
 }
 
-@media screen and (max-width: 480px) {
-  .audio-info {
-      flex-grow:1
-  }
-
-  #rightsec {
-      display: none
-  }
-
-  #audioControlButton {
-      display: inline-block
-  }
-
-  .audio-controls {
-      margin-right: 10px
-  }
-
-  #currentTime,#duration {
-      display: none
-  }
-}
 
 .volume-icon {
   cursor: pointer
@@ -1103,24 +1144,6 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
 }
 
 /* Add this CSS at the end of your existing styles */
-
-@media only screen and (max-width: 768px) {
-  .songListContainer {
-    width: calc(100% - 60px); /* Adjust width for smaller screens */
-    margin-left: 0; /* Remove left margin */
-    padding: 10px; /* Adjust padding */
-    height: auto;
-  }
-}
-@media only screen and (max-width: 1000px) {
-  .songListContainer {
-    width: calc(100% - 60px); /* Adjust width for smaller screens */
-    margin-left: 0; /* Remove left margin */
-    padding: 10px; /* Adjust padding */
-    height: auto;
-  }
-  
-}
 
 
 .qcon {
