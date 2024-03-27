@@ -63,20 +63,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
 }
 
 
-@media only screen and (max-width: 400px) {
-  .sidebar {
-      width:100%;
-      padding: 20px 10px;
-      position: fixed;
-      top: -100%;
-      left: 0;
-      background-color: #f1f1f1;
-      z-index: 1000;
-      overflow-y: auto;
-      max-height: 100vh;
-      transition: transform .3s ease,background-color .3s ease;
-     
-  }
+
 
 @media only screen and (max-width: 768px) {
   .sidebar-right {
