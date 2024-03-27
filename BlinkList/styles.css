@@ -63,7 +63,41 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
 }
 
 
+@media only screen and (max-width: 400px) {
+  .sidebar {
+      width:100%;
+      padding: 20px 10px;
+      position: fixed;
+      top: -100%;
+      left: 0;
+      background-color: #f1f1f1;
+      z-index: 1000;
+      overflow-y: auto;
+      max-height: 100vh;
+      transition: transform .3s ease,background-color .3s ease;
+     
+  }
+  #songList {
+    margin-top: 10px
+}
 
+.sidebar h3 {
+    font-size: 20px;
+    margin-bottom: 15px
+}
+
+.sidebar ul {
+    padding-left: 0
+}
+
+.sidebar li {
+    margin-bottom: 12px
+}
+
+.sidebar li a {
+    font-size: 16px
+}
+}
 
 @media only screen and (max-width: 768px) {
   .sidebar-right {
@@ -193,11 +227,27 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
   }
 }
 
-
 @media screen and (max-width: 480px) {
   .audio-info {
       flex-grow:1
   }
+
+  #rightsec {
+      display: none
+  }
+
+  #audioControlButton {
+      display: inline-block
+  }
+
+  .audio-controls {
+      margin-right: 10px
+  }
+
+  #currentTime,#duration {
+      display: none
+  }
+}
 
 @media only screen and (max-width: 768px) {
   .songListContainer {
@@ -217,22 +267,6 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
   
 }
 
-  #rightsec {
-      display: none
-  }
-
-  #audioControlButton {
-      display: inline-block
-  }
-
-  .audio-controls {
-      margin-right: 10px
-  }
-
-  #currentTime,#duration {
-      display: none
-  }
-}
 
 .sidebar ul {
   list-style-type: none;
@@ -256,27 +290,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
 }
 
 
-  #songList {
-      margin-top: 10px
-  }
 
-  .sidebar h3 {
-      font-size: 20px;
-      margin-bottom: 15px
-  }
-
-  .sidebar ul {
-      padding-left: 0
-  }
-
-  .sidebar li {
-      margin-bottom: 12px
-  }
-
-  .sidebar li a {
-      font-size: 16px
-  }
-}
 
 .content {
   padding: 20px;
@@ -1100,6 +1114,7 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
 }
 
 
+
 .volume-icon {
   cursor: pointer
 }
@@ -1131,6 +1146,8 @@ background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(58,52,52,1) 43%, rgba(1
 }
 
 /* Add this CSS at the end of your existing styles */
+
+
 
 
 .qcon {
